@@ -85,23 +85,22 @@ The GUI provides:
 - Detailed packet inspection
 - Thread-safe file loading (non-blocking UI)
 
-## Example Files
-
-The repository includes example files:
-- `SVMHK1_251204_120317.REL` - Real-time telemetry file
-- `SVMHK1_251204_120317.SDU` - Space Data Unit file
-
 ## Project Structure
 
 ```
-nasa-rdef-reader/
-├── nasa_rdef_reader/
-│   ├── __init__.py     # Package exports
-│   ├── reader.py       # Core RDEF reading functionality
-│   └── gui.py          # Graphical user interface
-├── setup.py           # Package setup
-├── README.md          # This file
-└── example_files/     # Sample RDEF files
+startool-rdef-reader/
+├── nasa_rdef_reader/          # Core package
+│   ├── __init__.py           # Package exports
+│   ├── reader.py             # RDEF file reading
+│   ├── gui.py                # GUI application
+│   └── utils.py              # Utility functions
+├── launch_gui.py             # GUI entry point
+├── setup.py                  # Package installation
+├── README.md                 # Documentation
+├── LICENSE                   # MIT License
+├── CONTRIBUTING.md           # Contributor guidelines
+├── CODE_OF_CONDUCT.md        # Community standards
+└── .gitignore               # Python project exclusions
 ```
 
 ## Requirements
@@ -117,8 +116,8 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ```bash
 # Fork and clone the repository
-git clone https://github.com/your-username/nasa-rdef-reader.git
-cd nasa-rdef-reader
+git clone https://github.com/your-username/startool-rdef-reader.git
+cd startool-rdef-reader
 
 # Set up development environment
 python -m venv venv
@@ -129,12 +128,6 @@ pip install -e ".[dev]"
 ### Running Examples
 
 ```bash
-# Run the example usage
-python examples/example_usage.py
-
-# Run the LASCO decoding demo
-python examples/lasco_decoding_demo.py
-
 # Launch the GUI
 python launch_gui.py
 ```
